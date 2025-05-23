@@ -6,3 +6,7 @@ two-sum:
     difficulty: easy
     directory: Easy - 1. Two Sum
     published: true
+valid-anagram:
+    difficulty: easy
+    directory: Easy - 242. Valid Anagram
+    published: true

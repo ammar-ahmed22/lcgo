@@ -7,6 +7,7 @@
 ### Easy
 - [1. Two Sum](./Easy%20-%201.%20Two%20Sum/docs.md)
 - [217. Contains Duplicate](./Easy%20-%20217.%20Contains%20Duplicate/docs.md)
+- [242. Valid Anagram](./Easy%20-%20242.%20Valid%20Anagram/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium
