@@ -32,27 +32,21 @@ Output: [0,0,9,0,0]
 
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
 
-## Solution Notes
-- We can use prefix and suffix product arrays to solve this
-- The prefix product array would be the product of all the numbers before the current number
-    + i.e. `prefix[i] = product of all the numbers before nums[i]`
-- The suffix produc array would be the product of all the number after the current number
-    + i.e. `suffix[i] = product of all the numbers after nums[i]`
-- Therefore, the `answer[i] = prefix[i] * suffix[i]` because we want the product of all the number except itself
-- To create the prefix and suffix arrays:
-    + For the prefix array, we start with `1` as the first value because there is nothing before the first number
-        * Iterate from `1 to n`, multiply, `nums[i - 1] * prefix[i - 1]` and set it to `prefix[i]`
-    + For the suffix array, we start with `1` as the last value because there is nothing after the last number
-        * Iterate from `n-2 to 0`, multiple, `nums[i + 1] * suffix[i + 1]` and set it to `suffix[i]`
-- Finally, we can create the answer by multiplying them together
+## Approach 
+To solve this, we can use prefix and suffix product arrays. The prefix product array is an array that contains the product of all the values before the `ith` value. The suffix product array is the same thing but for values after the `ith` value. We can use this to solve the problem because we want the product of eveything except itself so we want to multiple the product before the `ith` value with the product after the `ith` value. The prefix and suffix arrays will handle this for us. 
+
+To create the prefix array, we create an array of size `n` with `1` as the first value (there are no values before the first one so it defaults to 1). Then, we iterate from `1 to n` and set `prefix[i] = nums[i - 1] * prefix[i - 1]`. 
+
+For the suffix array, we create an array of size `n` with `1` as the last value (there are no values after the last one so it defaults to 1). Then, we iterate from `n-2 to 0` and set `suffix[i] = nums[i + 1] * suffix[i + 1]`.
+
+Finally, we create the answer by multiplying the product and suffix arrays (`answer[i] = prefix[i] * suffix[i]`).
 
 ### Complexity
 #### Time: `O(n)`
-- Iterating over the input array twice, one after the other
+We iterate over the input array twice, one after the other.
 
 #### Space: `O(n)`
-- We create two arrays of size `n`, prefix and suffix
-
+We create two arrays of size `n`
 
 ## Solution
 

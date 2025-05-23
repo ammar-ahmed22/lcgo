@@ -34,25 +34,17 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 - `0 <= strs[i].length <= 100`
 - `strs[i]` consists of lowercase English letters.
 
-## Solution Notes
-- A little more complex but similar to the [Valid Anagram's question](./Easy%20-%20242.%20Valid%20Anagram/docs.md)
-- We still will need to do the same thing in terms of counting frequencies of letters, however, we now want to track multiple anagrams
-- We can use a hash map to store the frequency arrays alongside the words that correspond to that
-- Create a hash map with the frequency array as the key and a slice of strings as the value (`map[26[int]][]string`)
-- Iterate over the `strs`
-    + For each word, create the frequency array
-    + If that frequency array already exists in the hash map, add the word to it's corresponding string slice
-    + If it doesn't, add a new slice with that word
-- Iterate over the hash map and create the result
+## Approach 
+This question builds upon the [Valid Anagram's question](./Easy%20-%20242.%20Valid%20Anagram/docs.md). We'll use the same approach of counting letter frequencies using a constant size array of 26 values, however, now we want to track multiple anagrams.
+We can use a hashmap to store the frequency arrays as the keys and an array of strings as it's values.
+We start by iterating over the strings. For each word, we create it's frequency array. Then, we check if that specific frequency array exists in the hashmap. If it does, we add that string to it's value array. If it doesn't, we create a new entry in the hashmap with that frequency array as the key and an array of strings with that string as it's first value as the hashmap value. To create the result, we simply iterate over the hashmap and combine all the values.
 
 ### Complexity
 #### Time: `O(n)`
-- We iterate over the input array once -> `O(n)`
-- We also iterate over the hash map once, which could potentially contain `n` elements if none are anagrams -> `O(n)`
-- Therefore, `O(n) + O(n) = O(n)`
+We iterate over the input array once (`O(n)`) and we also iterate over the hash map once, which could potentially have `n` values (`O(n)`)
 
 #### Space: `O(n)`
-- The hash map can potentially contain `n` entries
+The hash map can potentially contain `n` entries
 
 ## Solution
 

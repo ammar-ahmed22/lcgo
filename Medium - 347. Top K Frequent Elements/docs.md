@@ -29,41 +29,33 @@ Output: [1]
 
 **Follow up:** Your algorithm's time complexity must be better than `O(n log n)`, where n is the array's size.
 
-## Solution Notes
+## Approach 
 ### Brute Force Approach
-- We can create a frequency hash map for all the numbers
-- Then, we can sort the hash map by the values and return the `k` most frequent elements
-- This would be an `O(n log n)` algorithm because of the sorting
-- We can do better, ergo the follow-up
+To "brute force" this, we can create a frequency hash map for all the numbers. Then, we can sort the hash map by the values and return the `k` most frequent elements.
+Since we sort the hashmap, this would be an `O(n log n)` algorithm.
 
 ### Efficient Approach
-- We can use the idea that there can be at most `n` distinct elements
-    + i.e. If we have all unique numbers, all the frequencies are the same and we can return any `k` numbers as the response
-- How can we use this?
-    + Create a hash map to count the frequencies of all the numbers
-    + Then, create an array of size `n` with empty arrays as it's values
-        - We'll use each index of the array as the frequency value and add the value to that array 
-        - i.e. Let's take Example 1:
-        - Our hashmap will look like: `{ 1: 3, 2: 2, 3: 1}`
-        - Our array will be populated as such: `[[], [3], [2], [1], [], []]`
-        - As we can see, at index 1, we have the value `3` because `3` occurs 1 time
-        - At index 2, we have the value `2`, because `2` occurs twice
-        - At index 3, we have the value `1`, because `1` occurs once
-        - The reason we use an 2D array is to account for numbers that have the same frequency
-    + From this, we can iterate backwards and create our resultant array, until it is length `k`
-- This removes the requirement of sorting and we only iterative over the input array twice -> `O(n) + O(n) = O(n)`
+In order to do better than the brute force approach, we want to do away with the sorting. In order to do this, we can use the fact that there are, at most, `n` distinct elements. 
+So, we can start by, again, creating the hash map to count the frequencies of all the numbers. Next, we'll create a constant size array of size `n` containing empty arrays as it's values.
+From this, we can iterate over the hashmap and use the frequency as the index to the array. For example, let's say we have the values: `[1, 1, 1, 2, 2, 3]`. The frequency hash map (zero-based, i.e. zero = one occurrence, one = two occurrences, etc.) would look like:
+```
+{
+    1: 2,
+    2: 1,
+    3: 0,
+}
+```
+Thus, the frequency array would look like: `[3, 2, 1]`.
+
+Once we have the array created, it's trivial to create the result. We just iterate backwards over the values and continue adding values to the result until it reaches length `k`.
 
 
 ### Complexity
 #### Time: `O(n)`
-- We iterate over the input array once to create the frequency hash map
-- Iterate again to create the frequency array
-- `O(n) + O(n) = O(n)`
+We iterate once to create the frequency hash map and once more to create the frequency array. Therefore, `O(n) + O(n) = O(n)`
 
 #### Space: `O(n)`
-- Create a frequency hash map -> `O(n)`
-- Create a frequency array -> `O(n)`
-- `O(n) + O(n) = O(n)`
+We create the hash map and the frequency array both of which have a maximum size of `n`.
 
 ## Solution
 

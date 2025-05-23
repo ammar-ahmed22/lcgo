@@ -56,29 +56,20 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 - `board[i].length == 9`
 - `board[i][j]` is a digit `1-9` or `'.'`.
 
-## Solution Notes
-- We can start by checking each row and column
-- Essentially we are checking for any duplicates in the row or column ignoring the '.'
-    + We can use a hash map to check for duplicates by adding values already seen to the map
-- Iterate over the rows, if any have duplicates, return `false`
-- Iterate over the columns, if any have duplicates, return `false`
-- Now we need to iterate over the sub-boxes
-    + There are 9 sub-boxes
-    + Iterate over each subbox with two nested loops from `0 to 3` each
-    + Inside that do two more nested loops to iterate over the values in each sub-box
-        + To get the index on the main board -> `board[3 * brow + row][3 * bcol + col]`
-        + Where the `brow` and `bcol` are the box row and col and the `row` and `col` are the inner ones
-        + In total, we have 4 nested loops each going from `0 to 3`
+## Approach
+Basically, we want to check if there are duplicates in each row, column and subbox.
+
+To check for duplicates, we can write a helper function that will use a hashmap technique to check for duplicates.
+
+Checking rows and columns is straightforward, the complexity arises with checking the subboxes because we need to figure out how to iterate over them. To keep it simple, we can do 4 nested loops, the box row, the box column, the inner row, the inner column, then we can index the board with `board[3 * box_row + row][3 * box_col + col]`.
+Using this, we can create the array of values for the subbox and check for duplicates.
 
 ### Complexity
 #### Time: `O(n)`
-- We iterate over the rows and then in the check for duplicates iterate over all the values -> `O(n)`
-- We iterater over the columns and the in the check for duplicates iterate over all the avlues -> `O(n)`
-- We iterate over the 9 subboxes and then in the check for duplicates iterate over all the values -> `O(n)`
+Since we iterate over the rows, columns and subboxes separately, it's all `O(n)`
 
 #### Space: `O(n)`
-- We create rows and column slices when doing the checks, each of which have a length of `9`
-- Would technically be constant but we'll give it `n` since even the input is technically constant size
+The only extra space we create is for the rows, columns and subboxes which all have size of `9`. Technically, it's all constant but we'll give it `O(n)`
 
 ## Solution
 

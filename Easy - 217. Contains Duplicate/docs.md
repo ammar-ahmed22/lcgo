@@ -35,20 +35,15 @@ All elements are distinct.
 - `1 <= nums.length <= 105`
 - `-109 <= nums[i] <= 109`
 
-## Solution Notes
-- We can use a hash map to solve this
-- Create a hashmap with the key as the number and boolean for the value
-- Iterate over the numbers
-    + If the number exists in the hash map -> return `true` (we've already seen this number, duplicate)
-    + If it doesn't add it to the hash map
-    + If the loop complets, all numbers are unique -> return `false`
+## Approach 
+Simply use a hash map to keep track of which numbers we've already seen. If we've already seen a number, return `true`. Otherwise add to the hashmap and continue iterating. If we reach the end, there are no duplicates.
 
 ### Complexity
 #### Time: `O(n)`
-- We iterate through the array once
+We iterate through the array once
 
 #### Space: `O(n)`
-- We create a hash map that can, at most, contain all the numbers
+We create a hash map that can, at most, contain all the numbers
 
 ## Solution
 

@@ -23,26 +23,13 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
-## Solution Notes
-- We can solve this using a frequency count array
-- The idea is that `s` and `t` are anagrams if they have the same frequency of letters
-    + Since `s` and `t` are both lowercase English letters, there are only 26 possibilites of letters
-    + Therefore, we can create frequency arrays for both where each index maps to each letter of the alphabet
-- Create two `int` arrays, `freqS`, `freqT` each of length 26, initialized to zero values
-- Iterate over the string `s`
-    + For each letter, convert it to it's `int` representation and normalize between 0 and 25
-    + Increment the `freqS` array at that index
-- Do the same for the string `t`
-- Iterate over the `freqS` and `freqT` arrays together and ensure each values matches
-    + If there is any mismatch, return `false`
-    + Otherwise, if we reach the end of the arrays, -> return `true`
+## Approach 
+To solve this, we can use a frequency count array. Since the strings consist only of lowercase English letters, there are only 26 possible letter that we need to track. Therefore, we can create constant size `int` arrays initialized to zero with size 26. From this, we can iterate over the strings together (we will have already checked they are the same length) and increment the corresponding index for the letter in each array. Finally, we can check if the arrays have the same values, if they don't, we return `false` early. Otherwise we return `true`.
 
-### Further Optimizations
-- We can do an initial check to see if `s` and `t` are the same length, if they are not -> return `false`
-- Since they are the same length, the frequency count can be done together by iterating over the strings at the same time
+Another optimization that I'm thinking of now (not included in the solution) is that we don't need two arrays actually. We can increment the value for one string, say `s` and decrement for the other, `t`. Then, we can simply check if all the values in the frequency count array are zero.
 
 ### Follow-Up
-- If the inputs contained Unicode characters instead of lowercase English letters, we could do the same frequency count but with a hashmap instead to account for a large number of values
+If the inputs contained Unicode characters instead of lowercase English letters, we could do the same frequency count but with a hashmap instead to account for a larger number of values. We could also use a hashmap for the original problem, however a constant size array is just teeny bit faster because the memory is allocated to start with. 
 
 ### Complexity
 #### Time: `O(n)`
