@@ -5,7 +5,7 @@
 
 ## Problems Solved
 ### Easy
-- [1. Two Sum](./Easy - 1. Two Sum)
+- [1. Two Sum](./Easy%20-%201.%20Two%20Sum/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium

@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"net/url"
 	"strings"
 
 	"github.com/ammar-ahmed22/lcgo/fs"
@@ -66,8 +67,9 @@ var publishCmd = &cobra.Command{
 		parts := strings.Split(problem.Directory, "-")
 		problemName := strings.TrimSpace(parts[1])
 		uppercaseDifficulty := strings.ToUpper(problem.Difficulty)
+		encodedProblemDirectory := url.PathEscape(problem.Directory)
 		readme = utils.TemplateReplace(readme, map[string]string{
-			fmt.Sprintf("<!-- %s PROBLEMS -->", uppercaseDifficulty): fmt.Sprintf("- [%s](./%s)\n<!-- %s PROBLEMS -->", problemName, problem.Directory, uppercaseDifficulty),
+			fmt.Sprintf("<!-- %s PROBLEMS -->", uppercaseDifficulty): fmt.Sprintf("- [%s](./%s/docs.md)\n<!-- %s PROBLEMS -->", problemName, encodedProblemDirectory, uppercaseDifficulty),
 		})
 
 		err = fs.WriteFileString("README.md", readme)
