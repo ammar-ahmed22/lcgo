@@ -6,6 +6,10 @@ group-anagrams:
     difficulty: medium
     directory: Medium - 49. Group Anagrams
     published: true
+longest-consecutive-sequence:
+    difficulty: medium
+    directory: Medium - 128. Longest Consecutive Sequence
+    published: true
 product-of-array-except-self:
     difficulty: medium
     directory: Medium - 238. Product of Array Except Self
