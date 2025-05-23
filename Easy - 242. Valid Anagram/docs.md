@@ -44,6 +44,15 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 ### Follow-Up
 - If the inputs contained Unicode characters instead of lowercase English letters, we could do the same frequency count but with a hashmap instead to account for a large number of values
 
+### Complexity
+#### Time: `O(n)`
+- We iterate over the input array only once 
+- The second iteration is constant over 26 letters -> no effect
+
+#### Space: `O(1)`
+- The only extra space we create is for the frequency arrays which both have constant space
+- If we were to go the hashmap route, it would be `O(n)`
+
 ## Solution
 
 ```go
