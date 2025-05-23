@@ -35,7 +35,7 @@ func createDocsFile(dirname, problemTitle, problemDescription string) error {
 	if err != nil {
 		return fmt.Errorf(color.RedString("Unable to create docs.md file\n"))
 	}
-	docsString := fmt.Sprintf("# %s\n\n## Problem\n\n%s\n\n## Solution Notes\n\n", problemTitle, problemDescription)
+	docsString := fmt.Sprintf("# %s\n\n## Problem\n\n%s\n\n## Approach\n\n", problemTitle, problemDescription)
 	docsFile.WriteString(docsString)
 	docsFile.Close()
 	return nil
