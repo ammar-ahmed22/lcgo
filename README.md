@@ -6,6 +6,7 @@
 ## Problems Solved
 ### Easy
 - [1. Two Sum](./Easy%20-%201.%20Two%20Sum/docs.md)
+- [217. Contains Duplicate](./Easy%20-%20217.%20Contains%20Duplicate/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium
