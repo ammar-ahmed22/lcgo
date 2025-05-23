@@ -2,6 +2,10 @@ contains-duplicate:
     difficulty: easy
     directory: Easy - 217. Contains Duplicate
     published: true
+group-anagrams:
+    difficulty: medium
+    directory: Medium - 49. Group Anagrams
+    published: true
 two-sum:
     difficulty: easy
     directory: Easy - 1. Two Sum

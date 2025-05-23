@@ -11,6 +11,7 @@
 <!-- EASY PROBLEMS -->
 
 ### Medium
+- [49. Group Anagrams](./Medium%20-%2049.%20Group%20Anagrams/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard
