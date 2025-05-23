@@ -43,6 +43,20 @@ Output: [0,1]
 **Follow-up:** Can you come up with an algorithm that is less than `O(n2)` time complexity?
 
 ## Solution Notes
+- We can use a hash map to solve this problem
+- The idea is that for each number we want to check if there is another number in the array that can be added to it to get to the target
+    + Therefore, we can create a hash map that stores the numbers as the key and it's index as the value
+    + On each iteration, we check if the complement (`target - number`) is present in the hash map
+        - If it is, we have found our two values
+        - If not, we add the number to the hash map and continue
+    + Since the problem gurantees a solution, we don't need to worry about what to return if the loop completes (it never will)
+
+### Complexity
+#### Time: `O(n)`
+- We only iterate over the input array once
+
+#### Space: `O(n)`
+- We create a hash map that could, at most, contain all the numbers -> O(n)
 
 
 ## Solution
