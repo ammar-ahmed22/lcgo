@@ -1,6 +1,11 @@
 <div align="center">
     <h1>lcgo</h1>
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
+    <div>
+        <img alt="Easy Badge" src="https://img.shields.io/badge/3-easy-green">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/2-medium-yellow">
+        <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
+    </div>
 </div>
 
 ## Problems Solved
