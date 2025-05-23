@@ -90,9 +90,9 @@ var publishCmd = &cobra.Command{
 				}
 			}
 		}
-		readme = utils.ReplaceLine(readme, `alt="Easy badge"`, fmt.Sprintf(`        <img alt="Easy Badge" src="https://img.shields.io/badge/%d-easy-green">`, easyCount))
-		readme = utils.ReplaceLine(readme, `alt="Medium badge"`, fmt.Sprintf(`        <img alt="Medium Badge" src="https://img.shields.io/badge/%d-medium-yellow">`, medCount))
-		readme = utils.ReplaceLine(readme, `alt="Hard badge"`, fmt.Sprintf(`        <img alt="Hard Badge" src="https://img.shields.io/badge/%d-hard-red">`, hardCount))
+		readme = utils.ReplaceLine(readme, `alt="Easy Badge"`, fmt.Sprintf(`        <img alt="Easy Badge" src="https://img.shields.io/badge/%d-easy-green">`, easyCount))
+		readme = utils.ReplaceLine(readme, `alt="Medium Badge"`, fmt.Sprintf(`        <img alt="Medium Badge" src="https://img.shields.io/badge/%d-medium-yellow">`, medCount))
+		readme = utils.ReplaceLine(readme, `alt="Hard Badge"`, fmt.Sprintf(`        <img alt="Hard Badge" src="https://img.shields.io/badge/%d-hard-red">`, hardCount))
 
 		err = fs.WriteFileString("README.md", readme)
 		if err != nil {

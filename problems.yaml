@@ -6,6 +6,10 @@ group-anagrams:
     difficulty: medium
     directory: Medium - 49. Group Anagrams
     published: true
+product-of-array-except-self:
+    difficulty: medium
+    directory: Medium - 238. Product of Array Except Self
+    published: true
 top-k-frequent-elements:
     difficulty: medium
     directory: Medium - 347. Top K Frequent Elements
