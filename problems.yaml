@@ -22,3 +22,7 @@ valid-anagram:
     difficulty: easy
     directory: Easy - 242. Valid Anagram
     published: true
+valid-sudoku:
+    difficulty: medium
+    directory: Medium - 36. Valid Sudoku
+    published: true
