@@ -12,6 +12,7 @@
 
 ### Medium
 - [49. Group Anagrams](./Medium%20-%2049.%20Group%20Anagrams/docs.md)
+- [347. Top K Frequent Elements](./Medium%20-%20347.%20Top%20K%20Frequent%20Elements/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard
