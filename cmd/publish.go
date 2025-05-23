@@ -72,14 +72,34 @@ var publishCmd = &cobra.Command{
 			fmt.Sprintf("<!-- %s PROBLEMS -->", uppercaseDifficulty): fmt.Sprintf("- [%s](./%s/docs.md)\n<!-- %s PROBLEMS -->", problemName, encodedProblemDirectory, uppercaseDifficulty),
 		})
 
+		easyCount := 0
+		medCount := 0
+		hardCount := 0
+		problem.Published = true
+		problems[leetcodeID] = problem
+		for _, p := range problems {
+			if p.Published {
+				if p.Difficulty == "easy" {
+					easyCount++
+				}
+				if p.Difficulty == "medium" {
+					medCount++
+				}
+				if p.Difficulty == "hard" {
+					hardCount++
+				}
+			}
+		}
+		readme = utils.ReplaceLine(readme, `alt="Easy badge"`, fmt.Sprintf(`        <img alt="Easy Badge" src="https://img.shields.io/badge/%d-easy-green">`, easyCount))
+		readme = utils.ReplaceLine(readme, `alt="Medium badge"`, fmt.Sprintf(`        <img alt="Medium Badge" src="https://img.shields.io/badge/%d-medium-yellow">`, medCount))
+		readme = utils.ReplaceLine(readme, `alt="Hard badge"`, fmt.Sprintf(`        <img alt="Hard Badge" src="https://img.shields.io/badge/%d-hard-red">`, hardCount))
+
 		err = fs.WriteFileString("README.md", readme)
 		if err != nil {
 			return fmt.Errorf(color.RedString("Unable to write README.md\n"))
 		}
 		fmt.Printf("Added %s to %s\n", color.CyanString(leetcodeID), color.CyanString("README.md"))
 
-		problem.Published = true
-		problems[leetcodeID] = problem
 		err = utils.WriteYamlProblems("problems.yaml", problems)
 		if err != nil {
 			return fmt.Errorf(color.RedString("Unable to write problems.yaml\n"))

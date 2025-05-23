@@ -27,6 +27,15 @@ func TemplateReplace(template string, replacements map[string]string) string {
 	return template
 }
 
+func ReplaceLine(content, lineMatch, line string) string {
+	lines := strings.Split(content, "\n")
+	_, idx, _ := lo.FindIndexOf(lines, func(line string) bool {
+		return strings.Contains(line, lineMatch)
+	})
+	lines[idx] = line
+	return strings.Join(lines, "\n")
+}
+
 func BetweenLines(content, startLine, endLine string) (string, int, int) {
 	lines := strings.Split(content, "\n")
 	startIdx := -1
