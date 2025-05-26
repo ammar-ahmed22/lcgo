@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"net/url"
 	"strings"
+	"time"
 
 	"github.com/ammar-ahmed22/lcgo/fs"
 	"github.com/ammar-ahmed22/lcgo/utils"
 	"github.com/fatih/color"
+	"github.com/samber/lo"
 	"github.com/spf13/cobra"
 )
 
@@ -76,6 +78,7 @@ var publishCmd = &cobra.Command{
 		medCount := 0
 		hardCount := 0
 		problem.Published = true
+		problem.Date = lo.ToPtr(time.Now().Format("2006-01-02"))
 		problems[leetcodeID] = problem
 		for _, p := range problems {
 			if p.Published {

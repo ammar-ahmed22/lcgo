@@ -7,9 +7,11 @@ import (
 )
 
 type YamlProblem struct {
-	Difficulty string `yaml:"difficulty"`
-	Directory  string `yaml:"directory"`
-	Published  bool   `yaml:"published"`
+	Difficulty string   `yaml:"difficulty"`
+	Directory  string   `yaml:"directory"`
+	Published  bool     `yaml:"published"`
+	Date       *string  `yaml:"date,omitempty"`
+	Tags       []string `yaml:"tags,omitempty"`
 }
 
 func ReadYamlProblems(path string) (map[string]YamlProblem, error) {
