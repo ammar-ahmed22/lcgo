@@ -8,8 +8,8 @@ import (
 
 	"github.com/ammar-ahmed22/lcgo/fs"
 	"github.com/ammar-ahmed22/lcgo/utils"
+	"github.com/charmbracelet/huh"
 	"github.com/fatih/color"
-	"github.com/manifoldco/promptui"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
 )
@@ -23,6 +23,16 @@ func publishProblem(leetcodeID string, problems map[string]utils.YamlProblem) er
 		return fmt.Errorf(color.RedString("Problem \"%s\" is already published\n", leetcodeID))
 	}
 
+	var addTags bool
+	var tags []string
+	huh.NewConfirm().Title("Would you like to add tags?").Affirmative("Yes").Negative("No").Value(&addTags).Run()
+	if addTags {
+		var rawTags string
+		huh.NewInput().Title("Provide tags (comma-separated)").Value(&rawTags).Run()
+		tags = lo.Map(strings.Split(rawTags, ","), func(tag string, _ int) string {
+			return strings.TrimSpace(tag)
+		})
+	}
 	// Read the solution file
 	solutionFile, err := fs.ReadFileString(fmt.Sprintf("%s/main.go", problem.Directory))
 	if err != nil {
@@ -69,6 +79,9 @@ func publishProblem(leetcodeID string, problems map[string]utils.YamlProblem) er
 	hardCount := 0
 	problem.Published = true
 	problem.Date = lo.ToPtr(time.Now().Format("2006-01-02"))
+	if addTags {
+		problem.Tags = tags
+	}
 	problems[leetcodeID] = problem
 	for _, p := range problems {
 		if p.Published {
@@ -106,10 +119,10 @@ func filterUnpublishedProblems(problems map[string]utils.YamlProblem) []string {
 		lo.Filter(lo.Entries(problems), func(entry lo.Entry[string, utils.YamlProblem], _ int) bool {
 			return !entry.Value.Published
 		}),
-		func (entry lo.Entry[string, utils.YamlProblem], _ int) string {
+		func(entry lo.Entry[string, utils.YamlProblem], _ int) string {
 			return entry.Key
 		},
-		)
+	)
 
 }
 
@@ -130,14 +143,10 @@ var publishCmd = &cobra.Command{
 				fmt.Println("Nothing to publish!")
 				return nil
 			}
-			prompt := promptui.Select{
-				Label: "Select problem to publish",
-				Items: unpublished,
-			}
-			_, leetcodeID, err := prompt.Run()
-			if err != nil {
-				return err
-			}
+			var leetcodeID string
+			huh.NewSelect[string]().Title("Select a problem to publish").Options(lo.Map(unpublished, func(id string, _ int) huh.Option[string] {
+				return huh.NewOption(id, id)
+			})...).Value(&leetcodeID).Run()
 			return publishProblem(leetcodeID, problems)
 		} else {
 			return fmt.Errorf(color.RedString("Too many arguments!\n"))

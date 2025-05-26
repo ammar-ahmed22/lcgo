@@ -7,9 +7,9 @@ import (
 
 	"github.com/ammar-ahmed22/lcgo/utils"
 	"github.com/fatih/color"
-	"github.com/manifoldco/promptui"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
+	"github.com/charmbracelet/huh"
 )
 
 func runProblem(dirname string) error {
@@ -40,14 +40,10 @@ var runCmd = &cobra.Command{
 			}
 			return runProblem(problem.Directory)
 		} else if len(args) == 0 {
-			prompt := promptui.Select{
-				Label: "Select problem to run",
-				Items: lo.Keys(problems),
-			}
-			_, problemID, err := prompt.Run()
-			if err != nil {
-				return fmt.Errorf(color.RedString("Failed to get selection\n"))
-			}
+			var problemID string
+			huh.NewSelect[string]().Title("Select a problem to run").Options(lo.Map(lo.Keys(problems), func(id string, _ int) huh.Option[string] {
+				return huh.NewOption(id, id)
+			})...).Value(&problemID).Run()
 			problem, exists := problems[problemID]
 			if !exists {
 				return fmt.Errorf(color.RedString("Problem \"%s\" does not exist\n", problemID))
