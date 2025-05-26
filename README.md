@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/4-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/5-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/6-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -22,6 +22,7 @@
 - [238. Product of Array Except Self](./Medium%20-%20238.%20Product%20of%20Array%20Except%20Self/docs.md)
 - [36. Valid Sudoku](./Medium%20-%2036.%20Valid%20Sudoku/docs.md)
 - [128. Longest Consecutive Sequence](./Medium%20-%20128.%20Longest%20Consecutive%20Sequence/docs.md)
+- [167. Two Sum II](./Medium%20-%20167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

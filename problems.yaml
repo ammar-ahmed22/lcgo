@@ -46,6 +46,14 @@ two-sum:
     tags:
         - arrays
         - hashing
+two-sum-ii-input-array-is-sorted:
+    difficulty: medium
+    directory: Medium - 167. Two Sum II - Input Array Is Sorted
+    published: true
+    date: "2025-05-26"
+    tags:
+      - two-pointers
+      - math
 valid-anagram:
     difficulty: easy
     directory: Easy - 242. Valid Anagram
@@ -60,7 +68,7 @@ valid-palindrome:
     published: true
     date: "2025-05-26"
     tags:
-      - "two-pointers"
+        - two-pointers
 valid-sudoku:
     difficulty: medium
     directory: Medium - 36. Valid Sudoku
