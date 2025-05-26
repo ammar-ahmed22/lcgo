@@ -279,6 +279,8 @@ The command will create a new directory with the leetcode ID and generate a temp
 			Difficulty: data.Difficulty,
 			Directory: dirname,
 			Published: false,
+			Date: nil,
+			Tags: nil,
 		}
 		err = utils.WriteYamlProblems("problems.yaml", problems)
 		if err != nil {

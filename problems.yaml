@@ -2,63 +2,70 @@ contains-duplicate:
     difficulty: easy
     directory: Easy - 217. Contains Duplicate
     published: true
-    date: 2025-05-23
+    date: "2025-05-23"
     tags:
-      - arrays
-      - hashing
+        - arrays
+        - hashing
 group-anagrams:
     difficulty: medium
     directory: Medium - 49. Group Anagrams
     published: true
-    date: 2025-05-24
+    date: "2025-05-24"
     tags:
-      - arrays
-      - hashing
+        - arrays
+        - hashing
 longest-consecutive-sequence:
     difficulty: medium
     directory: Medium - 128. Longest Consecutive Sequence
     published: true
-    date: 2025-05-25
+    date: "2025-05-25"
     tags:
-      - arrays
-      - math
+        - arrays
+        - math
 product-of-array-except-self:
     difficulty: medium
     directory: Medium - 238. Product of Array Except Self
     published: true
-    date: 2025-05-25
+    date: "2025-05-25"
     tags:
-      - arrays
-      - math
+        - arrays
+        - math
 top-k-frequent-elements:
     difficulty: medium
     directory: Medium - 347. Top K Frequent Elements
     published: true
-    date: 2025-05-24
+    date: "2025-05-24"
     tags:
-      - arrays
-      - hashing
+        - arrays
+        - hashing
 two-sum:
     difficulty: easy
     directory: Easy - 1. Two Sum
     published: true
-    date: 2025-05-23
+    date: "2025-05-23"
     tags:
-      - arrays
-      - hashing
+        - arrays
+        - hashing
 valid-anagram:
     difficulty: easy
     directory: Easy - 242. Valid Anagram
     published: true
-    date: 2025-05-23
+    date: "2025-05-23"
     tags:
-      - arrays
-      - hashing
+        - arrays
+        - hashing
+valid-palindrome:
+    difficulty: easy
+    directory: Easy - 125. Valid Palindrome
+    published: true
+    date: "2025-05-26"
+    tags:
+      - "two-pointers"
 valid-sudoku:
     difficulty: medium
     directory: Medium - 36. Valid Sudoku
     published: true
-    date: 2025-05-24
+    date: "2025-05-24"
     tags:
-      - matrices
-      - math
+        - matrices
+        - math
