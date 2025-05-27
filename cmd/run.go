@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"strings"
 
 	"github.com/ammar-ahmed22/lcgo/utils"
+	"github.com/charmbracelet/huh"
 	"github.com/fatih/color"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
-	"github.com/charmbracelet/huh"
 )
 
 func runProblem(dirname string) error {
@@ -36,7 +37,19 @@ var runCmd = &cobra.Command{
 			leetcodeID := args[0]
 			problem, exists := problems[leetcodeID]
 			if !exists {
-				return fmt.Errorf(color.RedString("Problem \"%s\" does not exist\n", leetcodeID))
+				filtered := lo.Filter(lo.Keys(problems), func (id string, _ int) bool {
+					return strings.Contains(id, leetcodeID)
+				})
+				if len(filtered) == 0 {
+					color.Yellow("No matches for search \"%s\"", leetcodeID)
+					return nil
+				}
+				var problemID string
+				huh.NewSelect[string]().Title(fmt.Sprintf("Select from problems matching \"%s\"", leetcodeID)).Options(lo.Map(filtered, func(id string, _ int) huh.Option[string] {
+					return huh.NewOption(id, id)
+				})...).Value(&problemID).Run()
+				problem, _ := problems[problemID]
+				return runProblem(problem.Directory)
 			}
 			return runProblem(problem.Directory)
 		} else if len(args) == 0 {
@@ -44,10 +57,7 @@ var runCmd = &cobra.Command{
 			huh.NewSelect[string]().Title("Select a problem to run").Options(lo.Map(lo.Keys(problems), func(id string, _ int) huh.Option[string] {
 				return huh.NewOption(id, id)
 			})...).Value(&problemID).Run()
-			problem, exists := problems[problemID]
-			if !exists {
-				return fmt.Errorf(color.RedString("Problem \"%s\" does not exist\n", problemID))
-			}
+			problem, _ := problems[problemID]
 			return runProblem(problem.Directory)
 		} else {
 			return fmt.Errorf(color.RedString("Too many arguments!\n"))
