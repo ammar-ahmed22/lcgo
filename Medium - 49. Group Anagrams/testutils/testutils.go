@@ -23,31 +23,39 @@ func NewTestCase[R any](returns R) *TestCase[R] {
 
 func RunTestCases[R any](testCases []*TestCase[R], f func(...any) R) error {
 	for i, testCase := range testCases {
-		success, err := testCase.Run(f)
-		if err != nil {
-			return err
-		}
 		var name string
 		if testCase.Name != "" {
 			name = testCase.Name
 		} else {
 			name = fmt.Sprintf("Test %d", i+1)
 		}
-
-		if success {
-			color.Green("PASSED - %s", name)
-		} else {
-			received := f(testCase.Args...)
-			color.Red("FAILED - %s", name)
-			color.Red("  Expected: %v", testCase.Returns)
-			color.Red("  Received: %v", received)
-		}
+		testCase.Run(name, f)
 	}
 	return nil
 }
 
-func (t *TestCase[R]) Run(f func(...any) R) (bool, error) {
-	return t.CompareFn(f(t.Args...), t.Returns), nil
+func Test[R comparable](name string, expected, received R) {
+	if expected == received {
+		color.Green("PASSED - %s", name)
+	} else {
+		color.Red("FAILED - %s", name)
+		color.Red("  Expected: %v", expected)
+		color.Red("  Received: %v", received)
+	}
+}
+
+func TestCompare[R any](name string, expected, received R, compareFn func(R, R) bool) {
+	if compareFn(expected, received) {
+		color.Green("PASSED - %s", name)
+	} else {
+		color.Red("FAILED - %s", name)
+		color.Red("  Expected: %v", expected)
+		color.Red("  Received: %v", received)
+	}
+}
+
+func (t *TestCase[R]) Run(name string, f func(...any) R) {
+	TestCompare(name, t.Returns, f(t.Args...), t.CompareFn)
 }
 
 func (t *TestCase[R]) WithArgs(args ...any) *TestCase[R] {
