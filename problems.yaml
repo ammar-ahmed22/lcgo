@@ -6,6 +6,14 @@
     tags:
         - two-pointers
         - math
+container-with-most-water:
+    difficulty: medium
+    directory: Medium - 11. Container With Most Water
+    published: true
+    date: "2025-05-27"
+    tags:
+        - two-pointer
+        - math
 contains-duplicate:
     difficulty: easy
     directory: Easy - 217. Contains Duplicate
