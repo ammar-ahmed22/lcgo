@@ -6,6 +6,13 @@
     tags:
         - two-pointers
         - math
+binary-search:
+    difficulty: easy
+    directory: Easy - 704. Binary Search
+    published: true
+    date: "2025-05-27"
+    tags:
+        - binary-search
 container-with-most-water:
     difficulty: medium
     directory: Medium - 11. Container With Most Water
