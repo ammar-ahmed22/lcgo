@@ -2,7 +2,7 @@
     <h1>lcgo</h1>
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
-        <img alt="Easy Badge" src="https://img.shields.io/badge/4-easy-green">
+        <img alt="Easy Badge" src="https://img.shields.io/badge/5-easy-green">
         <img alt="Medium Badge" src="https://img.shields.io/badge/8-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
@@ -14,6 +14,7 @@
 - [217. Contains Duplicate](./Easy%20-%20217.%20Contains%20Duplicate/docs.md)
 - [242. Valid Anagram](./Easy%20-%20242.%20Valid%20Anagram/docs.md)
 - [125. Valid Palindrome](./Easy%20-%20125.%20Valid%20Palindrome/docs.md)
+- [20. Valid Parentheses](./Easy%20-%2020.%20Valid%20Parentheses/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium

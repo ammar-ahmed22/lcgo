@@ -85,6 +85,13 @@ valid-palindrome:
     date: "2025-05-26"
     tags:
         - two-pointers
+valid-parentheses:
+    difficulty: easy
+    directory: Easy - 20. Valid Parentheses
+    published: true
+    date: "2025-05-27"
+    tags:
+        - stack
 valid-sudoku:
     difficulty: medium
     directory: Medium - 36. Valid Sudoku
