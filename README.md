@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/5-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/9-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/10-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -27,6 +27,7 @@
 - [15. 3Sum](./Medium%20-%2015.%203Sum/docs.md)
 - [11. Container With Most Water](./Medium%20-%2011.%20Container%20With%20Most%20Water/docs.md)
 - [155. Min Stack](./Medium%20-%20155.%20Min%20Stack/docs.md)
+- [150. Evaluate Reverse Polish Notation](./Medium%20-%20150.%20Evaluate%20Reverse%20Polish%20Notation/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

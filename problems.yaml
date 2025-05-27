@@ -22,6 +22,14 @@ contains-duplicate:
     tags:
         - arrays
         - hashing
+evaluate-reverse-polish-notation:
+    difficulty: medium
+    directory: Medium - 150. Evaluate Reverse Polish Notation
+    published: true
+    date: "2025-05-27"
+    tags:
+        - stack
+        - math
 group-anagrams:
     difficulty: medium
     directory: Medium - 49. Group Anagrams
