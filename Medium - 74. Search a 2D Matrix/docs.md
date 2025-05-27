@@ -45,11 +45,11 @@ To do the binary search on the rows, we can check if the value is contained insi
 
 One important note is to remember to return `false` if the inner binary search does not find the answer because it should be in that row and it's not that means it's not in the matrix. Not doing this will lead to an infinite loop.
 
-### Complexity
-#### Time: `O(log(m * n))`
+## Complexity
+### Time: `O(log(m * n))`
 We do two nested binary searches. One on the matrix and the other on the row.
 
-#### Space: `O(1)`
+### Space: `O(1)`
 No extra space was created.
 
 ## Solution

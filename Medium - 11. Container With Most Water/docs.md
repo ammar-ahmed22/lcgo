@@ -38,11 +38,11 @@ Output: 1
 ## Approach
 We can use two pointers to solve this problem. Obviously, we want to track the maximum area that we see but without checking every possible combination. The optimal way to do this is by having two pointers on each side and always moving the pointers toward the larger bar. This works because we want to maximize width as well as height and consistently moving towards the larger bar while starting at the maximum width will ensure this.
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate through the array once
 
-#### Space: `O(1)`
+### Space: `O(1)`
 No extra space is created
 
 ## Solution

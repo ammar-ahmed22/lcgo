@@ -46,6 +46,13 @@ We can have a left and right pointer which we used to iterate while the left poi
 
 For my solution, I wrote a helper function to do the `isAlphanumeric` check but this could also be inlined.
 
+## Complexity
+### Time: `O(n)`
+We iterate over the input array once.
+
+### Space: `O(1)`
+No extra space is created.
+
 ## Solution
 
 ```go

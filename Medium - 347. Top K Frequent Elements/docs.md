@@ -50,11 +50,11 @@ Thus, the frequency array would look like: `[3, 2, 1]`.
 Once we have the array created, it's trivial to create the result. We just iterate backwards over the values and continue adding values to the result until it reaches length `k`.
 
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate once to create the frequency hash map and once more to create the frequency array. Therefore, `O(n) + O(n) = O(n)`
 
-#### Space: `O(n)`
+### Space: `O(n)`
 We create the hash map and the frequency array both of which have a maximum size of `n`.
 
 ## Solution

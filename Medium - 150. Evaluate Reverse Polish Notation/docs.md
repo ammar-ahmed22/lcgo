@@ -72,11 +72,11 @@ Once we complete the iterations, we can simply return the last value in the stac
 For my specific solution, I wrote a helper function to do the evaluation. An important note is on the order of evaluation specifically for subtraction and division. We want to do `b - a` and `b / a`, where `a` is the first value popped and `b` is the second value popped.
 
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate through the tokens only once.
 
-#### Space: `O(1)`
+### Space: `O(1)`
 No extra space is created.
 
 ## Solution

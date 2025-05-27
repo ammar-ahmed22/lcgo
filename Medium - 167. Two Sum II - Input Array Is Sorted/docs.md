@@ -55,11 +55,12 @@ We can use a two-pointer approach to solve this. We initialize two pointers, one
 Through this, we are guranteed to find the solution in the iteration because the tests are generated so that there is exactly one solution.
 
 The problem also states that the array is **1-indexed** so we want to make sure to increment our index values when returning the solution.
-### Complexity
-#### Time: `O(n)`
+
+## Complexity
+### Time: `O(n)`
 We iterate over the input array only once.
 
-#### Space: `O(1)`
+### Space: `O(1)`
 We do not create any additional space.
 
 ## Solution

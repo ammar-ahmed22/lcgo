@@ -57,11 +57,11 @@ After this, the remaining methods are trivial.
 
 For my specific solution, I implemented a generic, `Stack[R any]` struct to make using array-based stacks a little bit easier syntactically. I could have also used a linked-list based stack for better efficiency but this is sufficient.
 
-### Complexity
-#### Time: `O(1)`
+## Complexity
+### Time: `O(1)`
 None of the methods do any iteration at all so it's all constant time.
 
-#### Space: `O(n)`
+### Space: `O(n)`
 We create two stacks that could potentially be the size of the inputs.
 
 ## Solution

@@ -39,11 +39,11 @@ This question builds upon the [Valid Anagram's question](https://ammarahmed.ca/e
 We can use a hashmap to store the frequency arrays as the keys and an array of strings as it's values.
 We start by iterating over the strings. For each word, we create it's frequency array. Then, we check if that specific frequency array exists in the hashmap. If it does, we add that string to it's value array. If it doesn't, we create a new entry in the hashmap with that frequency array as the key and an array of strings with that string as it's first value as the hashmap value. To create the result, we simply iterate over the hashmap and combine all the values.
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate over the input array once (`O(n)`) and we also iterate over the hash map once, which could potentially have `n` values (`O(n)`)
 
-#### Space: `O(n)`
+### Space: `O(n)`
 The hash map can potentially contain `n` entries
 
 ## Solution

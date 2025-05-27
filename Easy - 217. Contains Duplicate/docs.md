@@ -38,11 +38,11 @@ All elements are distinct.
 ## Approach 
 Simply use a hash map to keep track of which numbers we've already seen. If we've already seen a number, return `true`. Otherwise add to the hashmap and continue iterating. If we reach the end, there are no duplicates.
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate through the array once
 
-#### Space: `O(n)`
+### Space: `O(n)`
 We create a hash map that can, at most, contain all the numbers
 
 ## Solution

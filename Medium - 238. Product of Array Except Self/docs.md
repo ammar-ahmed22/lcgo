@@ -41,11 +41,11 @@ For the suffix array, we create an array of size `n` with `1` as the last value 
 
 Finally, we create the answer by multiplying the product and suffix arrays (`answer[i] = prefix[i] * suffix[i]`).
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 We iterate over the input array twice, one after the other.
 
-#### Space: `O(n)`
+### Space: `O(n)`
 We create two arrays of size `n`
 
 ## Solution

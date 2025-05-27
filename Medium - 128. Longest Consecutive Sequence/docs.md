@@ -46,11 +46,11 @@ The next edge case occurs with the time complexity. If there are duplicates of t
 
 In our case, we do this by marking with a boolean value in the hashmap since we are using a boolean map.
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 It might look like it's not `O(n)` because we have a nested loop, however, there is an important consideration. We only go down that nested loop if it's the start of a sequence, otherwise, we keep marching forward. Therefore, in the worst case, when all values are consecutive, we only go down the nested loop once, maintaining `O(n)`
 
-#### Space: `O(n)`
+### Space: `O(n)`
 We create a hashmap of size `n`.
 
 ## Solution

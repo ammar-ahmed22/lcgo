@@ -56,11 +56,11 @@ Now, for the first iteration, we're treating, `arr[0] = -1` as our current numbe
 
 Another important note is in regards to duplicate triplets. We can mitigate this by skipping over numbers we've already processed. Since the array is sorted, all duplicates will be beside eachother. Therefore, in the main loop, we can check if the next number is the same as the current and skip the current. In the inner loop, when we find a triplet, we can keep incrementing/decrementing until we are at the last occurrence of the particular number before moving on to finding any more triplets with that target.
 
-### Complexity:
-#### Time: `O(n^2)`
+## Complexity
+### Time: `O(n^2)`
 Sorting the input array is `n log n`. After that we iterate over the array twice, which is `O(n^2)`. Adding them together, we get `O(n log n) + O(n^2) = O(n^2)` (we drop lower order terms).
 
-#### Space: `O(1)`
+### Space: `O(1)`
 No extra space is created.
 
 ## Solution

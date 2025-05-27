@@ -44,6 +44,13 @@ We can use a stack to solve this problem.
 
 We iterate through the string, whenever we see an opening bracket, we push the corresponding closing bracket to the stack. When we see a closing bracket, we check if the top of the stack is the same bracket, if it's not, we can return `false` early. Otherwise, we pop from the stack and continue iterating. If we reach the end and the stack is empty, the parentheses are valid. If the stack is not empty, that means something was not closed and we can return `false`.
 
+## Complexity
+### Time: `O(n)`
+We iterate over the input once.
+
+### Space: `O(n)`
+We create a stack that can possibly contain all the elements of the input.
+
 ## Solution
 
 ```go

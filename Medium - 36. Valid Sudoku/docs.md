@@ -64,11 +64,11 @@ To check for duplicates, we can write a helper function that will use a hashmap 
 Checking rows and columns is straightforward, the complexity arises with checking the subboxes because we need to figure out how to iterate over them. To keep it simple, we can do 4 nested loops, the box row, the box column, the inner row, the inner column, then we can index the board with `board[3 * box_row + row][3 * box_col + col]`.
 Using this, we can create the array of values for the subbox and check for duplicates.
 
-### Complexity
-#### Time: `O(n)`
+## Complexity
+### Time: `O(n)`
 Since we iterate over the rows, columns and subboxes separately, it's all `O(n)`
 
-#### Space: `O(n)`
+### Space: `O(n)`
 The only extra space we create is for the rows, columns and subboxes which all have size of `9`. Technically, it's all constant but we'll give it `O(n)`
 
 ## Solution
