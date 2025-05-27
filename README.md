@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/5-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/8-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/9-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -26,6 +26,7 @@
 - [167. Two Sum II](./Medium%20-%20167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/docs.md)
 - [15. 3Sum](./Medium%20-%2015.%203Sum/docs.md)
 - [11. Container With Most Water](./Medium%20-%2011.%20Container%20With%20Most%20Water/docs.md)
+- [155. Min Stack](./Medium%20-%20155.%20Min%20Stack/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

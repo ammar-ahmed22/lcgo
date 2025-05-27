@@ -38,6 +38,14 @@ longest-consecutive-sequence:
     tags:
         - arrays
         - math
+min-stack:
+    difficulty: medium
+    directory: Medium - 155. Min Stack
+    published: true
+    date: "2025-05-27"
+    tags:
+        - stack
+        - class
 product-of-array-except-self:
     difficulty: medium
     directory: Medium - 238. Product of Array Except Self
