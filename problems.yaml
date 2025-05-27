@@ -69,6 +69,13 @@ product-of-array-except-self:
     tags:
         - arrays
         - math
+search-a-2d-matrix:
+    difficulty: medium
+    directory: Medium - 74. Search a 2D Matrix
+    published: true
+    date: "2025-05-27"
+    tags:
+        - binary-search
 top-k-frequent-elements:
     difficulty: medium
     directory: Medium - 347. Top K Frequent Elements
