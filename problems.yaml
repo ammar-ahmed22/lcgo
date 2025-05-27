@@ -1,3 +1,11 @@
+3sum:
+    difficulty: medium
+    directory: Medium - 15. 3Sum
+    published: true
+    date: "2025-05-27"
+    tags:
+        - two-pointers
+        - math
 contains-duplicate:
     difficulty: easy
     directory: Easy - 217. Contains Duplicate
@@ -52,8 +60,8 @@ two-sum-ii-input-array-is-sorted:
     published: true
     date: "2025-05-26"
     tags:
-      - two-pointers
-      - math
+        - two-pointers
+        - math
 valid-anagram:
     difficulty: easy
     directory: Easy - 242. Valid Anagram

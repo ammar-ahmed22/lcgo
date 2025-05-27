@@ -42,7 +42,7 @@ Output: [0,1]
 
 **Follow-up:** Can you come up with an algorithm that is less than `O(n2)` time complexity?
 
-## Solution Notes
+## Approach 
 We can use a hashmap to solve this problem. The idea is that we want to check if there is another number in the array that can be added to the current number to reach the target. Therefore, we can iterate over the numbers and check if the complement (`target - number`) exists in the hashmap, if it does, we return the two indices. Otherwise, we add the number to the hashmap
 with the index as its value. Since it's guranteed that there is a solution, we don't need to worry about what to return if the iteration completes (it never will).
 
