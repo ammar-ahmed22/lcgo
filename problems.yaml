@@ -6,6 +6,13 @@
     tags:
         - two-pointers
         - math
+best-time-to-buy-and-sell-stock:
+    difficulty: easy
+    directory: Easy - 121. Best Time to Buy and Sell Stock
+    published: true
+    date: "2025-05-27"
+    tags:
+        - sliding-window
 binary-search:
     difficulty: easy
     directory: Easy - 704. Binary Search
