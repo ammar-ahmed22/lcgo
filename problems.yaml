@@ -76,6 +76,13 @@ product-of-array-except-self:
     tags:
         - arrays
         - math
+reverse-linked-list:
+    difficulty: easy
+    directory: Easy - 206. Reverse Linked List
+    published: true
+    date: "2025-05-28"
+    tags:
+        - linked-list
 search-a-2d-matrix:
     difficulty: medium
     directory: Medium - 74. Search a 2D Matrix

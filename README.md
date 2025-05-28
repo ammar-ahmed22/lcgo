@@ -2,7 +2,7 @@
     <h1>lcgo</h1>
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
-        <img alt="Easy Badge" src="https://img.shields.io/badge/7-easy-green">
+        <img alt="Easy Badge" src="https://img.shields.io/badge/8-easy-green">
         <img alt="Medium Badge" src="https://img.shields.io/badge/11-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
@@ -17,6 +17,7 @@
 - [20. Valid Parentheses](./Easy%20-%2020.%20Valid%20Parentheses/docs.md)
 - [704. Binary Search](./Easy%20-%20704.%20Binary%20Search/docs.md)
 - [121. Best Time to Buy and Sell Stock](./Easy%20-%20121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/docs.md)
+- [206. Reverse Linked List](./Easy%20-%20206.%20Reverse%20Linked%20List/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium
