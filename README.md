@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/8-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/11-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/12-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -32,6 +32,7 @@
 - [155. Min Stack](./Medium%20-%20155.%20Min%20Stack/docs.md)
 - [150. Evaluate Reverse Polish Notation](./Medium%20-%20150.%20Evaluate%20Reverse%20Polish%20Notation/docs.md)
 - [74. Search a 2D Matrix](./Medium%20-%2074.%20Search%20a%202D%20Matrix/docs.md)
+- [22. Generate Parentheses](./Medium%20-%2022.%20Generate%20Parentheses/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

@@ -44,6 +44,14 @@ evaluate-reverse-polish-notation:
     tags:
         - stack
         - math
+generate-parentheses:
+    difficulty: medium
+    directory: Medium - 22. Generate Parentheses
+    published: true
+    date: "2025-06-09"
+    tags:
+        - stack
+        - recursion
 group-anagrams:
     difficulty: medium
     directory: Medium - 49. Group Anagrams
