@@ -20,6 +20,14 @@ binary-search:
     date: "2025-05-27"
     tags:
         - binary-search
+car-fleet:
+    difficulty: medium
+    directory: Medium - 853. Car Fleet
+    published: true
+    date: "2025-06-12"
+    tags:
+        - stack
+        - sorting
 container-with-most-water:
     difficulty: medium
     directory: Medium - 11. Container With Most Water

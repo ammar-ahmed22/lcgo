@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/8-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/13-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/14-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -34,6 +34,7 @@
 - [74. Search a 2D Matrix](./Medium%20-%2074.%20Search%20a%202D%20Matrix/docs.md)
 - [22. Generate Parentheses](./Medium%20-%2022.%20Generate%20Parentheses/docs.md)
 - [739. Daily Temperatures](./Medium%20-%20739.%20Daily%20Temperatures/docs.md)
+- [853. Car Fleet](./Medium%20-%20853.%20Car%20Fleet/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard
