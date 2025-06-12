@@ -75,6 +75,13 @@ group-anagrams:
     tags:
         - arrays
         - hashing
+koko-eating-bananas:
+    difficulty: medium
+    directory: Medium - 875. Koko Eating Bananas
+    published: true
+    date: "2025-06-12"
+    tags:
+        - binary-search
 longest-consecutive-sequence:
     difficulty: medium
     directory: Medium - 128. Longest Consecutive Sequence
