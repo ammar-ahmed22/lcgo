@@ -127,6 +127,13 @@ search-a-2d-matrix:
     date: "2025-05-27"
     tags:
         - binary-search
+search-in-rotated-sorted-array:
+    difficulty: medium
+    directory: Medium - 33. Search in Rotated Sorted Array
+    published: true
+    date: "2025-06-13"
+    tags:
+        - binary-search
 top-k-frequent-elements:
     difficulty: medium
     directory: Medium - 347. Top K Frequent Elements

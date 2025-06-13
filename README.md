@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/8-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/16-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/17-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -37,6 +37,7 @@
 - [853. Car Fleet](./Medium%20-%20853.%20Car%20Fleet/docs.md)
 - [875. Koko Eating Bananas](./Medium%20-%20875.%20Koko%20Eating%20Bananas/docs.md)
 - [153. Find Minimum in Rotated Sorted Array](./Medium%20-%20153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/docs.md)
+- [33. Search in Rotated Sorted Array](./Medium%20-%2033.%20Search%20in%20Rotated%20Sorted%20Array/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard
