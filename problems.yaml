@@ -59,6 +59,13 @@ evaluate-reverse-polish-notation:
     tags:
         - stack
         - math
+find-minimum-in-rotated-sorted-array:
+    difficulty: medium
+    directory: Medium - 153. Find Minimum in Rotated Sorted Array
+    published: true
+    date: "2025-06-13"
+    tags:
+        - binary-search
 generate-parentheses:
     difficulty: medium
     directory: Medium - 22. Generate Parentheses
