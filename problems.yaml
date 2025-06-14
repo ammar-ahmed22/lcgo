@@ -134,6 +134,13 @@ search-in-rotated-sorted-array:
     date: "2025-06-13"
     tags:
         - binary-search
+time-based-key-value-store:
+    difficulty: medium
+    directory: Medium - 981. Time Based Key-Value Store
+    published: true
+    date: "2025-06-14"
+    tags:
+        - binary-search
 top-k-frequent-elements:
     difficulty: medium
     directory: Medium - 347. Top K Frequent Elements
