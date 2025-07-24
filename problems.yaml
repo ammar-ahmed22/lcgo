@@ -104,6 +104,14 @@ longest-substring-without-repeating-characters:
     date: "2025-06-14"
     tags:
         - sliding-window
+merge-two-sorted-lists:
+    difficulty: easy
+    directory: Easy - 21. Merge Two Sorted Lists
+    published: true
+    date: "2025-07-24"
+    tags:
+        - linked-list
+        - sorting
 min-stack:
     difficulty: medium
     directory: Medium - 155. Min Stack
