@@ -51,7 +51,8 @@ type LeetcodeProblem struct {
 func getLeetcodeProblemData(leetcodeID string) (*LeetcodeProblem, error) {
 	url := fmt.Sprintf("https://leetcode.com/problems/%s", leetcodeID)
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
-		chromedp.Flag("headless", true),     // Disable headless mode
+		chromedp.ExecPath("/Applications/Chromium.app/Contents/MacOS/Chromium"),
+		chromedp.Flag("headless", false),     // Disable headless mode
 		chromedp.Flag("disable-gpu", false), // (optional) Enable GPU for rendering
 		chromedp.Flag("no-sandbox", true),
 		chromedp.Flag("disable-blink-features", "AutomationControlled"), // hides headless
@@ -59,13 +60,13 @@ func getLeetcodeProblemData(leetcodeID string) (*LeetcodeProblem, error) {
 			"(KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"),
 	)
 
-	allocCtx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	ctx, cancel := chromedp.NewContext(allocCtx)
+	allocCtx, cancel := chromedp.NewExecAllocator(ctx, opts...)
 	defer cancel()
 
-	ctx, cancel = context.WithTimeout(ctx, 5*time.Second)
+	ctx, cancel = chromedp.NewContext(allocCtx)
 	defer cancel()
 
 	var (
@@ -101,6 +102,7 @@ func getLeetcodeProblemData(leetcodeID string) (*LeetcodeProblem, error) {
 		chromedp.Text(`.view-lines`, &codeSnippet, chromedp.ByQuery),
 	)
 	if err != nil {
+		fmt.Printf("error: %v\n", err)
 		return nil, fmt.Errorf(color.RedString("Unable to fetch leetcode problem data\n"))
 	}
 
@@ -139,8 +141,8 @@ func createGoFiles(dirname, moduleName, codeSnippet string) error {
 	functionName, argsTypes, returnType := utils.ExtractFunctionMetadata(codeSnippet)
 	templateFile = utils.TemplateReplace(templateFile, map[string]string{
 		"// INSERT PROBLEM": codeSnippet,
-		"module_name":    moduleName,
-		"RETURN_TYPE":    returnType,
+		"module_name":       moduleName,
+		"RETURN_TYPE":       returnType,
 		"FUNCTION_CALL": fmt.Sprintf("%s(%s)", functionName, strings.Join(lo.Map(argsTypes, func(typ string, i int) string {
 			return fmt.Sprintf("args[%d].(%s)", i, typ)
 		}), ",")),
@@ -277,17 +279,17 @@ The command will create a new directory with the leetcode ID and generate a temp
 		// Add to the yaml file
 		problems[leetcodeID] = utils.YamlProblem{
 			Difficulty: data.Difficulty,
-			Directory: dirname,
-			Published: false,
-			Date: nil,
-			Tags: nil,
+			Directory:  dirname,
+			Published:  false,
+			Date:       nil,
+			Tags:       nil,
 		}
 		err = utils.WriteYamlProblems("problems.yaml", problems)
 		if err != nil {
 			cleanDirectory(dirname)
 			return fmt.Errorf(color.RedString("Unable to write problems.yaml\n"))
 		}
-		fmt.Printf("%s Updated %s\n",color.GreenString("\u2713"), color.CyanString("problems.yaml"))
+		fmt.Printf("%s Updated %s\n", color.GreenString("\u2713"), color.CyanString("problems.yaml"))
 
 		duration := time.Since(start)
 

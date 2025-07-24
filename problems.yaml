@@ -89,6 +89,13 @@ koko-eating-bananas:
     date: "2025-06-12"
     tags:
         - binary-search
+linked-list-cycle:
+    difficulty: easy
+    directory: Easy - 141. Linked List Cycle
+    published: true
+    date: "2025-07-24"
+    tags:
+        - linked-list
 longest-consecutive-sequence:
     difficulty: medium
     directory: Medium - 128. Longest Consecutive Sequence
