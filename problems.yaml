@@ -138,7 +138,10 @@ product-of-array-except-self:
 reorder-list:
     difficulty: medium
     directory: Medium - 143. Reorder List
-    published: false
+    published: true
+    date: "2025-07-25"
+    tags:
+        - linked-list
 reverse-linked-list:
     difficulty: easy
     directory: Easy - 206. Reverse Linked List
