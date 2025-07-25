@@ -3,6 +3,7 @@ package testutils
 import (
 	"fmt"
 	"reflect"
+    "strings"
 
 	"github.com/fatih/color"
 	"github.com/samber/lo"
@@ -80,4 +81,37 @@ func SliceEqualUnordered[T comparable](a, b []T) bool {
 	countA := lo.CountValues(a)
 	countB := lo.CountValues(b)
 	return reflect.DeepEqual(countA, countB)
+}
+
+type ListNode struct {
+  Val int
+  Next *ListNode
+}
+
+func (l *ListNode) String() string {
+	var builder strings.Builder
+	curr := l
+	for curr != nil {
+		builder.WriteString(fmt.Sprintf("%d -> ", curr.Val))
+		curr = curr.Next
+	}
+	builder.WriteString("nil")
+	return builder.String()
+}
+
+func ListFromSlice(nums []int) *ListNode {
+	if len(nums) == 0 {
+		return &ListNode{}
+	}
+	list := ListNode{
+		Val: nums[0],
+	}
+	curr := &list
+	for i := 1; i < len(nums); i++ {
+		curr.Next = &ListNode{
+			Val: nums[i],
+		}
+		curr = curr.Next
+	}
+	return &list
 }
