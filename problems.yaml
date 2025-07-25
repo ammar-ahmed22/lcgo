@@ -135,6 +135,10 @@ product-of-array-except-self:
     tags:
         - arrays
         - math
+reorder-list:
+    difficulty: medium
+    directory: Medium - 143. Reorder List
+    published: false
 reverse-linked-list:
     difficulty: easy
     directory: Easy - 206. Reverse Linked List
