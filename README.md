@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/10-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/20-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/21-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -43,6 +43,7 @@
 - [981. Time Based Key](./Medium%20-%20981.%20Time%20Based%20Key-Value%20Store/docs.md)
 - [3. Longest Substring Without Repeating Characters](./Medium%20-%203.%20Longest%20Substring%20Without%20Repeating%20Characters/docs.md)
 - [143. Reorder List](./Medium%20-%20143.%20Reorder%20List/docs.md)
+- [424. Longest Repeating Character Replacement](./Medium%20-%20424.%20Longest%20Repeating%20Character%20Replacement/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

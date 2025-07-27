@@ -104,6 +104,13 @@ longest-consecutive-sequence:
     tags:
         - arrays
         - math
+longest-repeating-character-replacement:
+    difficulty: medium
+    directory: Medium - 424. Longest Repeating Character Replacement
+    published: true
+    date: "2025-07-27"
+    tags:
+        - sliding-window
 longest-substring-without-repeating-characters:
     difficulty: medium
     directory: Medium - 3. Longest Substring Without Repeating Characters
