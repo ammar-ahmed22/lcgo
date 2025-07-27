@@ -1,26 +1,8 @@
 package main
 
 import (
-	"fmt"
-	. "reverse-linked-list/testutils"
-	"strings"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
-
-type ListNode struct {
-	Val int
-	Next *ListNode
-}
-
-func (l *ListNode) toString() string {
-	var builder strings.Builder
-	curr := l
-	for curr != nil {
-		builder.WriteString(fmt.Sprintf("%d -> ", curr.Val))
-		curr = curr.Next
-	}
-	builder.WriteString("nil")
-	return builder.String()
-}
 
 // <-- DO NOT REMOVE: PROBLEM START -->
 func reverseList(head *ListNode) *ListNode { 

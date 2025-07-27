@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "find-minimum-in-rotated-sorted-array/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
 
 // <-- DO NOT REMOVE: PROBLEM START -->

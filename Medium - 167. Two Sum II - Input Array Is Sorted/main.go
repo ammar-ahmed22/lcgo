@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "two-sum-ii-input-array-is-sorted/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
 
 // <-- DO NOT REMOVE: PROBLEM START -->

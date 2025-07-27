@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "best-time-to-buy-and-sell-stock/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
 
 // <-- DO NOT REMOVE: PROBLEM START -->

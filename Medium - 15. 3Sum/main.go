@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "3sum/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 	"sort"
 )
 

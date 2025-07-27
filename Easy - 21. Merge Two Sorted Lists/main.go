@@ -1,14 +1,9 @@
 package main
 
 import (
-	. "merge-two-sorted-lists/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 	"reflect"
 )
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 func listFromSlice(nums []int) *ListNode {
 	if len(nums) == 0 {

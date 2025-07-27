@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "koko-eating-bananas/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 	"math"
 )
 

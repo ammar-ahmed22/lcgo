@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "daily-temperatures/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
 
 // <-- DO NOT REMOVE: PROBLEM START -->

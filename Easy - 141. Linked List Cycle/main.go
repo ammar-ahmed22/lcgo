@@ -1,13 +1,8 @@
 package main
 
 import (
-	. "linked-list-cycle/testutils"
+	. "github.com/ammar-ahmed22/lcgo/testutils"
 )
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 // <-- DO NOT REMOVE: PROBLEM START -->
 func hasCycle(head *ListNode) bool {
