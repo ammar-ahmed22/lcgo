@@ -44,6 +44,13 @@ contains-duplicate:
     tags:
         - arrays
         - hashing
+copy-list-with-random-pointer:
+    difficulty: medium
+    directory: Medium - 138. Copy List with Random Pointer
+    published: true
+    date: "2025-07-27"
+    tags:
+        - linked-list
 daily-temperatures:
     difficulty: medium
     directory: Medium - 739. Daily Temperatures
