@@ -141,12 +141,28 @@ func createGoFiles(dirname, moduleName, codeSnippet string) error {
 	functionName, argsTypes, returnType := utils.ExtractFunctionMetadata(codeSnippet)
 	templateFile = utils.TemplateReplace(templateFile, map[string]string{
 		"// INSERT PROBLEM": codeSnippet,
-		"module_name":       moduleName,
 		"RETURN_TYPE":       returnType,
 		"FUNCTION_CALL": fmt.Sprintf("%s(%s)", functionName, strings.Join(lo.Map(argsTypes, func(typ string, i int) string {
 			return fmt.Sprintf("args[%d].(%s)", i, typ)
 		}), ",")),
 	})
+
+	// Create the go.mod file
+	goTpl, err := fs.ReadFileString("tpl/go.tpl")
+	if err != nil {
+		return fmt.Errorf(color.RedString("Unable to read go.tpl file\n"))
+	}
+
+	goTpl = utils.TemplateReplace(goTpl, map[string]string{
+		"module_name": moduleName,
+	})
+
+	goModFile, err := os.Create(fmt.Sprintf("%s/go.mod", dirname))
+	if err != nil {
+		return fmt.Errorf(color.RedString("Unable to create go.mod file\n"))
+	}
+	goModFile.WriteString(goTpl)
+	goModFile.Close()
 
 	// Create the main.go file
 	mainFile, err := os.Create(fmt.Sprintf("%s/main.go", dirname))
@@ -156,23 +172,6 @@ func createGoFiles(dirname, moduleName, codeSnippet string) error {
 	mainFile.WriteString(templateFile)
 	mainFile.Close()
 
-	// Create the testutils directory
-	err = os.MkdirAll(fmt.Sprintf("%s/testutils", dirname), os.ModePerm)
-	if err != nil {
-		return fmt.Errorf(color.RedString("Unable to create testutils directory\n"))
-	}
-
-	// Create the testutils.go file
-	testutilsFile, err := os.Create(fmt.Sprintf("%s/testutils/testutils.go", dirname))
-	if err != nil {
-		return fmt.Errorf(color.RedString("Unable to create testutils.go file\n"))
-	}
-	testutilsFileContent, err := fs.ReadFileString("tpl/testutils/testutils.tpl")
-	if err != nil {
-		return fmt.Errorf(color.RedString("Unable to read testutils.tpl file\n"))
-	}
-	testutilsFile.WriteString(testutilsFileContent)
-	testutilsFile.Close()
 	return nil
 }
 
@@ -267,7 +266,7 @@ The command will create a new directory with the leetcode ID and generate a temp
 			return err
 		}
 		fmt.Printf("Created %s\n", color.CyanString("%s/main.go", dirname))
-		fmt.Printf("Created %s\n", color.CyanString("%s/testutils/testutils.go", dirname))
+		fmt.Printf("Created %s\n", color.CyanString("%s/go.mod", dirname))
 
 		// Tidy the go module
 		if err = tidyGoModule(dirname); err != nil {
