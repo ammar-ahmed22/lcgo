@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/10-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/24-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/25-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
     </div>
 </div>
@@ -47,6 +47,7 @@
 - [19. Remove Nth Node From End of List](./Medium%20-%2019.%20Remove%20Nth%20Node%20From%20End%20of%20List/docs.md)
 - [138. Copy List with Random Pointer](./Medium%20-%20138.%20Copy%20List%20with%20Random%20Pointer/docs.md)
 - [2. Add Two Numbers](./Medium%20-%202.%20Add%20Two%20Numbers/docs.md)
+- [567. Permutation in String](./Medium%20-%20567.%20Permutation%20in%20String/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

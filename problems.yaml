@@ -148,6 +148,13 @@ min-stack:
     tags:
         - stack
         - class
+permutation-in-string:
+    difficulty: medium
+    directory: Medium - 567. Permutation in String
+    published: true
+    date: "2025-07-28"
+    tags:
+        - sliding-window
 product-of-array-except-self:
     difficulty: medium
     directory: Medium - 238. Product of Array Except Self
