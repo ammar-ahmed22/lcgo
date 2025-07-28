@@ -6,6 +6,13 @@
     tags:
         - two-pointers
         - math
+add-two-numbers:
+    difficulty: medium
+    directory: Medium - 2. Add Two Numbers
+    published: true
+    date: "2025-07-28"
+    tags:
+        - linked-list
 best-time-to-buy-and-sell-stock:
     difficulty: easy
     directory: Easy - 121. Best Time to Buy and Sell Stock
