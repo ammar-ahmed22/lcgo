@@ -4,7 +4,7 @@
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/10-easy-green">
         <img alt="Medium Badge" src="https://img.shields.io/badge/25-medium-yellow">
-        <img alt="Hard Badge" src="https://img.shields.io/badge/0-hard-red">
+        <img alt="Hard Badge" src="https://img.shields.io/badge/1-hard-red">
     </div>
 </div>
 
@@ -51,4 +51,5 @@
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard
+- [76. Minimum Window Substring](./Hard%20-%2076.%20Minimum%20Window%20Substring/docs.md)
 <!-- HARD PROBLEMS -->

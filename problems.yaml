@@ -148,6 +148,13 @@ min-stack:
     tags:
         - stack
         - class
+minimum-window-substring:
+    difficulty: hard
+    directory: Hard - 76. Minimum Window Substring
+    published: true
+    date: "2025-07-29"
+    tags:
+        - sliding-window
 permutation-in-string:
     difficulty: medium
     directory: Medium - 567. Permutation in String
