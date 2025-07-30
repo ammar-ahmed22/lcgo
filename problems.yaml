@@ -206,6 +206,13 @@ search-in-rotated-sorted-array:
     date: "2025-06-13"
     tags:
         - binary-search
+sliding-window-maximum:
+    difficulty: hard
+    directory: Hard - 239. Sliding Window Maximum
+    published: true
+    date: "2025-07-29"
+    tags:
+        - sliding-window
 time-based-key-value-store:
     difficulty: medium
     directory: Medium - 981. Time Based Key-Value Store
