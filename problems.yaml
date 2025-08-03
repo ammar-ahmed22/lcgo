@@ -80,6 +80,13 @@ find-minimum-in-rotated-sorted-array:
     date: "2025-06-13"
     tags:
         - binary-search
+find-the-duplicate-number:
+    difficulty: medium
+    directory: Medium - 287. Find the Duplicate Number
+    published: true
+    date: "2025-08-03"
+    tags:
+        - linked-list
 generate-parentheses:
     difficulty: medium
     directory: Medium - 22. Generate Parentheses
