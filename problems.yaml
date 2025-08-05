@@ -235,6 +235,13 @@ top-k-frequent-elements:
     tags:
         - arrays
         - hashing
+trapping-rain-water:
+    difficulty: hard
+    directory: Hard - 42. Trapping Rain Water
+    published: true
+    date: "2025-08-05"
+    tags:
+        - two-pointers
 two-sum:
     difficulty: easy
     directory: Easy - 1. Two Sum
