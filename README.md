@@ -4,7 +4,7 @@
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/10-easy-green">
         <img alt="Medium Badge" src="https://img.shields.io/badge/26-medium-yellow">
-        <img alt="Hard Badge" src="https://img.shields.io/badge/3-hard-red">
+        <img alt="Hard Badge" src="https://img.shields.io/badge/4-hard-red">
     </div>
 </div>
 
@@ -55,4 +55,5 @@
 - [76. Minimum Window Substring](./Hard%20-%2076.%20Minimum%20Window%20Substring/docs.md)
 - [239. Sliding Window Maximum](./Hard%20-%20239.%20Sliding%20Window%20Maximum/docs.md)
 - [42. Trapping Rain Water](./Hard%20-%2042.%20Trapping%20Rain%20Water/docs.md)
+- [84. Largest Rectangle in Histogram](./Hard%20-%2084.%20Largest%20Rectangle%20in%20Histogram/docs.md)
 <!-- HARD PROBLEMS -->

@@ -110,6 +110,13 @@ koko-eating-bananas:
     date: "2025-06-12"
     tags:
         - binary-search
+largest-rectangle-in-histogram:
+    difficulty: hard
+    directory: Hard - 84. Largest Rectangle in Histogram
+    published: true
+    date: "2025-09-18"
+    tags:
+        - stack
 linked-list-cycle:
     difficulty: easy
     directory: Easy - 141. Linked List Cycle
