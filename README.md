@@ -3,7 +3,7 @@
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
         <img alt="Easy Badge" src="https://img.shields.io/badge/10-easy-green">
-        <img alt="Medium Badge" src="https://img.shields.io/badge/26-medium-yellow">
+        <img alt="Medium Badge" src="https://img.shields.io/badge/27-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/4-hard-red">
     </div>
 </div>
@@ -49,6 +49,7 @@
 - [2. Add Two Numbers](./Medium%20-%202.%20Add%20Two%20Numbers/docs.md)
 - [567. Permutation in String](./Medium%20-%20567.%20Permutation%20in%20String/docs.md)
 - [287. Find the Duplicate Number](./Medium%20-%20287.%20Find%20the%20Duplicate%20Number/docs.md)
+- [200. Number of Islands](./Medium%20-%20200.%20Number%20of%20Islands/docs.md)
 <!-- MEDIUM PROBLEMS -->
 
 ### Hard

@@ -169,6 +169,14 @@ minimum-window-substring:
     date: "2025-07-29"
     tags:
         - sliding-window
+number-of-islands:
+    difficulty: medium
+    directory: Medium - 200. Number of Islands
+    published: true
+    date: "2025-10-04"
+    tags:
+        - graph
+        - matrix
 permutation-in-string:
     difficulty: medium
     directory: Medium - 567. Permutation in String
