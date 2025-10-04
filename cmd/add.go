@@ -60,7 +60,7 @@ func getLeetcodeProblemData(leetcodeID string) (*LeetcodeProblem, error) {
 			"(KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"),
 	)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
 	allocCtx, cancel := chromedp.NewExecAllocator(ctx, opts...)
@@ -87,6 +87,10 @@ func getLeetcodeProblemData(leetcodeID string) (*LeetcodeProblem, error) {
 		chromedp.Text(`[class*="text-difficulty"]`, &difficulty, chromedp.ByQuery),
 		// Extract the problem title
 		chromedp.Text(fmt.Sprintf(`[href="/problems/%s/"]`, leetcodeID), &problemTitle, chromedp.ByQuery),
+
+		// Close the Leet AI popup
+		chromedp.WaitVisible(`button[title="Skip"]`, chromedp.BySearch),
+		chromedp.Click(`button[title="Skip"]`, chromedp.BySearch),
 
 		// Wait for the language selector to load
 		chromedp.WaitVisible(`//button[text()='C++']`, chromedp.BySearch),

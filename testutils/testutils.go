@@ -82,3 +82,10 @@ func SliceEqualUnordered[T comparable](a, b []T) bool {
 	return reflect.DeepEqual(countA, countB)
 }
 
+func Slice[T any](vals ...T) []T {
+	return vals
+}
+
+func IntArray(nums ...int) []int {
+	return nums
+}
