@@ -146,6 +146,13 @@ longest-substring-without-repeating-characters:
     date: "2025-06-14"
     tags:
         - sliding-window
+merge-intervals:
+    difficulty: medium
+    directory: Medium - 56. Merge Intervals
+    published: true
+    date: "2025-10-05"
+    tags:
+        - stack
 merge-two-sorted-lists:
     difficulty: easy
     directory: Easy - 21. Merge Two Sorted Lists
