@@ -103,6 +103,13 @@ group-anagrams:
     tags:
         - arrays
         - hashing
+invert-binary-tree:
+    difficulty: easy
+    directory: Easy - 226. Invert Binary Tree
+    published: true
+    date: "2025-10-06"
+    tags:
+        - binary-tree
 koko-eating-bananas:
     difficulty: medium
     directory: Medium - 875. Koko Eating Bananas
