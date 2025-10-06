@@ -146,6 +146,14 @@ longest-substring-without-repeating-characters:
     date: "2025-06-14"
     tags:
         - sliding-window
+lru-cache:
+    difficulty: medium
+    directory: Medium - 146. LRU Cache
+    published: true
+    date: "2025-10-06"
+    tags:
+        - linked-list
+        - OOD
 merge-intervals:
     difficulty: medium
     directory: Medium - 56. Merge Intervals
