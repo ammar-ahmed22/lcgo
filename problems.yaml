@@ -161,6 +161,13 @@ lru-cache:
     tags:
         - linked-list
         - OOD
+maximum-depth-of-binary-tree:
+    difficulty: easy
+    directory: Easy - 104. Maximum Depth of Binary Tree
+    published: true
+    date: "2025-10-06"
+    tags:
+        - binary-tree
 merge-intervals:
     difficulty: medium
     directory: Medium - 56. Merge Intervals

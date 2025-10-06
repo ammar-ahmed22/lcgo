@@ -2,7 +2,7 @@
     <h1>lcgo</h1>
     <p>CLI to create dedicated go modules for running, testing and documenting LeetCode solutions.</p>
     <div>
-        <img alt="Easy Badge" src="https://img.shields.io/badge/11-easy-green">
+        <img alt="Easy Badge" src="https://img.shields.io/badge/12-easy-green">
         <img alt="Medium Badge" src="https://img.shields.io/badge/29-medium-yellow">
         <img alt="Hard Badge" src="https://img.shields.io/badge/4-hard-red">
     </div>
@@ -21,6 +21,7 @@
 - [21. Merge Two Sorted Lists](./Easy%20-%2021.%20Merge%20Two%20Sorted%20Lists/docs.md)
 - [141. Linked List Cycle](./Easy%20-%20141.%20Linked%20List%20Cycle/docs.md)
 - [226. Invert Binary Tree](./Easy%20-%20226.%20Invert%20Binary%20Tree/docs.md)
+- [104. Maximum Depth of Binary Tree](./Easy%20-%20104.%20Maximum%20Depth%20of%20Binary%20Tree/docs.md)
 <!-- EASY PROBLEMS -->
 
 ### Medium
